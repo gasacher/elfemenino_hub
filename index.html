@@ -411,39 +411,7 @@
     line-height: 1.65;
     font-size: 0.95rem;
   }
-  .club-price {
-    margin: 1.75rem auto 0;
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.65rem;
-    padding: 0.75rem 1.1rem;
-    border-radius: 8px;
-    border: 1px solid rgba(59,159,209,0.22);
-    background: rgba(0,0,0,0.35);
-    color: rgba(242, 248, 255, 0.92);
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 14px 34px rgba(0,0,0,0.35);
-  }
-  .club-price:hover {
-    background: linear-gradient(145deg, var(--celeste) 0%, #2a7ab0 100%);
-    border-color: rgba(226, 239, 255, 0.65);
-    transform: translateY(-2px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.45);
-  }
-  .club-price-amount {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2rem;
-    line-height: 1;
-    color: var(--blanco);
-  }
-  .club-price-period {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: rgba(242, 248, 255, 0.7);
-  }
+  /* club-price CTA removed (using standard CTA button) */
 
   /* Club: WhatsApp bubble (black) */
   #comunidad { position: relative; }
@@ -1322,9 +1290,9 @@
 </nav>
 
 <div class="nav-mobile" id="mobile-menu" aria-hidden="true">
+  <a href="#quienes" class="mobile-link">Quiénes somos</a>
   <a href="#pilares" class="mobile-link">Pilares</a>
-  <a href="#impacto" class="mobile-link">Impacto</a>
-  <a href="#comunidad" class="mobile-cta mobile-link">Unirse</a>
+  <a href="#sponsoreo" class="mobile-cta mobile-link">Sumate</a>
 </div>
 
 <section class="hero" id="hero">
@@ -1608,10 +1576,9 @@
     </div>
   </div>
 
-  <a class="club-price reveal" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808475dd2f560175dd94fb330234" target="_blank" rel="noopener noreferrer" aria-label="Suscribirme 5000 pesos por mes">
-    <div class="club-price-amount">$ 5.500</div>
-    <div class="club-price-period">por mes</div>
-  </a>
+  <div class="cta-actions reveal">
+    <a class="cta-action-btn" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808475dd2f560175dd94fb330234" target="_blank" rel="noopener noreferrer">#AguanteElFemenino</a>
+  </div>
 
   <a class="club-wa-fab" href="https://wa.me/5491125762076" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">

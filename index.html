@@ -349,7 +349,7 @@
     transition: opacity 0.2s;
   }
   .cta-form button:hover { opacity: 0.85; }
-  .cta-actions { display: flex; justify-content: center; margin-top: 1.25rem; }
+  .cta-actions { display: flex; justify-content: center; margin-top: 1.25rem; gap: 0.75rem; flex-wrap: wrap; }
   .cta-action-btn {
     display: inline-flex;
     align-items: center;
@@ -367,6 +367,118 @@
     transition: opacity 0.2s, transform 0.2s;
   }
   .cta-action-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+  .cta-action-btn--ghost {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.35);
+  }
+  .cta-action-btn--ghost:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.55);
+  }
+  .club-grid {
+    max-width: 920px;
+    margin: 2.25rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+  }
+  .club-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(59,159,209,0.18);
+    border-radius: 6px;
+    padding: 1.25rem 1.15rem;
+  }
+  .club-card h3 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.06em;
+    font-size: 1.35rem;
+    margin: 0 0 0.6rem;
+    color: var(--blanco);
+  }
+  .club-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(242, 248, 255, 0.78);
+  }
+  .club-list {
+    margin: 0;
+    padding-left: 1.05rem;
+    color: rgba(242, 248, 255, 0.78);
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+  .club-price {
+    margin: 1.75rem auto 0;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    padding: 0.75rem 1.1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(59,159,209,0.22);
+    background: rgba(0,0,0,0.35);
+    color: rgba(242, 248, 255, 0.92);
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+  }
+  .club-price:hover {
+    background: linear-gradient(145deg, var(--celeste) 0%, #2a7ab0 100%);
+    border-color: rgba(226, 239, 255, 0.65);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  }
+  .club-price-amount {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--blanco);
+  }
+  .club-price-period {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(242, 248, 255, 0.7);
+  }
+
+  /* Club: WhatsApp bubble (black) */
+  #comunidad { position: relative; }
+  .club-wa-fab {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.78);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+    color: var(--blanco);
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    z-index: 2;
+  }
+  .club-wa-fab:hover {
+    transform: translateY(-2px);
+    background: rgba(0,0,0,0.88);
+    border-color: rgba(255,255,255,0.28);
+    box-shadow: 0 24px 56px rgba(0,0,0,0.55);
+  }
+  .club-wa-fab:focus-visible {
+    outline: 2px solid var(--celeste-claro);
+    outline-offset: 4px;
+  }
+  .club-wa-fab svg { width: 26px; height: 26px; }
+  @media (max-width: 768px) {
+    .club-wa-fab { right: 1rem; bottom: 1rem; width: 52px; height: 52px; }
+  }
 
   footer {
     border-top: 1px solid rgba(59,159,209,0.15);
@@ -1029,6 +1141,7 @@
     .cta-form { flex-direction: column; border-radius: 4px; }
     .cta-form input { border-radius: 4px 4px 0 0; padding: 1rem; }
     .cta-form button { border-radius: 0 0 4px 4px; padding: 1rem; }
+    .club-grid { grid-template-columns: 1fr; }
     footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
   }
   @media (max-width: 640px) {
@@ -1397,7 +1510,7 @@
               </svg>
               <span>YouTube</span>
             </a>
-            <a href="https://x.com/elfemenino" class="qs-rrss-cta qs-rrss-cta--social" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <a href="https://x.com/FemeninoAFA" class="qs-rrss-cta qs-rrss-cta--social" target="_blank" rel="noopener noreferrer" aria-label="X">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23 22h-6.4l-5-6.1L6.1 22H2.9l7.4-8.5L1 2h6.6l4.6 5.6L18.9 2Zm-1.1 18h1.7L7.1 4H5.3l12.5 16Z"/>
               </svg>
@@ -1408,7 +1521,7 @@
               </svg>
               <span>TikTok</span>
             </a>
-            <a href="https://wa.me/5491100000000" class="qs-rrss-cta qs-rrss-cta--social" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/5491125762076" class="qs-rrss-cta qs-rrss-cta--social" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path fill="currentColor" d="M12.1 2A9.9 9.9 0 0 0 2.2 12a9.8 9.8 0 0 0 1.4 5.1L2 22l5-1.6a9.8 9.8 0 0 0 5.1 1.4A9.9 9.9 0 0 0 22 12 9.9 9.9 0 0 0 12.1 2Zm0 17.9a8 8 0 0 1-4.1-1.1l-.3-.2-3 1 .9-2.9-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-7.9 7.9Zm4.6-5.9c-.3-.2-1.6-.8-1.9-.9s-.5-.2-.7.2-.8.9-1 .9-.4.1-.7-.1a6.6 6.6 0 0 1-2-1.2 7.5 7.5 0 0 1-1.4-1.8c-.1-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.4-.1-.6-.7-1.7-1-2.3c-.3-.6-.6-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3.1 13.1 13.1 0 0 0 5 4.4 5.8 5.8 0 0 0 3.6.5 3 3 0 0 0 2-1.4 2.4 2.4 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3Z"/>
               </svg>
@@ -1469,16 +1582,42 @@
 
 <section class="cta-section" id="comunidad">
   <h2 class="reveal">Sumate al Club de <em>El Femenino</em></h2>
-  <p class="reveal">¿Te gusta lo que hacemos? Sumate a nuestra comunidad.</p>
-  <ul class="spon-items reveal" aria-label="Beneficios del Club de El Femenino">
-    <li>Acceder a contenido exclusivo</li>
-    <li>Ser parte de una comunidad comprometida</li>
-    <li>Participar de iniciativas, eventos y espacios del hub</li>
-    <li>Ser parte es construir</li>
-  </ul>
-  <div class="cta-actions reveal">
-    <a class="cta-action-btn" href="https://www.instagram.com/elfemenino/" target="_blank" rel="noopener noreferrer">#AguanteElFemenino</a>
+  <p class="reveal">Unite a la comunidad que sostiene el periodismo deportivo con perspectiva de género. No es solo un aporte. Es un aguante.</p>
+
+  <div class="club-grid reveal" role="list" aria-label="Información del Club #AguanteElFemenino">
+    <div class="club-card" role="listitem">
+      <h3>¿Qué es el Club?</h3>
+      <p>Es el espacio para quienes creen que otra forma de contar el deporte es posible. Con tu suscripción, hacés posible que El Femenino siga creciendo como medio federal, inclusivo y especializado en fútbol femenino.</p>
+    </div>
+    <div class="club-card" role="listitem">
+      <h3>Beneficios</h3>
+      <ul class="club-list">
+        <li>Acceso a contenidos exclusivos</li>
+        <li>Invitaciones a eventos</li>
+      </ul>
+    </div>
+    <div class="club-card" role="listitem">
+      <h3>¿Por qué sumarte?</h3>
+      <ul class="club-list">
+        <li>Acompañamos el torneo local</li>
+        <li>Cubrimos la Copa Libertadores Femenina desde 2016</li>
+        <li>Seguimos a la Selección desde 2017</li>
+        <li>Estuvimos en los Mundiales 2019 y 2023 (FIFA)</li>
+        <li>Archivo más completo y citado en Wikipedia</li>
+      </ul>
+    </div>
   </div>
+
+  <a class="club-price reveal" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808475dd2f560175dd94fb330234" target="_blank" rel="noopener noreferrer" aria-label="Suscribirme 5000 pesos por mes">
+    <div class="club-price-amount">$ 5.500</div>
+    <div class="club-price-period">por mes</div>
+  </a>
+
+  <a class="club-wa-fab" href="https://wa.me/5491125762076" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M12.1 2A9.9 9.9 0 0 0 2.2 12a9.8 9.8 0 0 0 1.4 5.1L2 22l5-1.6a9.8 9.8 0 0 0 5.1 1.4A9.9 9.9 0 0 0 22 12 9.9 9.9 0 0 0 12.1 2Zm0 17.9a8 8 0 0 1-4.1-1.1l-.3-.2-3 1 .9-2.9-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-7.9 7.9Zm4.6-5.9c-.3-.2-1.6-.8-1.9-.9s-.5-.2-.7.2-.8.9-1 .9-.4.1-.7-.1a6.6 6.6 0 0 1-2-1.2 7.5 7.5 0 0 1-1.4-1.8c-.1-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.4-.1-.6-.7-1.7-1-2.3c-.3-.6-.6-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.3 3.3 0 0 0-1 2.4 5.7 5.7 0 0 0 1.2 3.1 13.1 13.1 0 0 0 5 4.4 5.8 5.8 0 0 0 3.6.5 3 3 0 0 0 2-1.4 2.4 2.4 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3Z"/>
+    </svg>
+  </a>
 </section>
 
 <footer>

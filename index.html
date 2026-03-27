@@ -712,7 +712,7 @@
   }
   .qs-card--rrss {
     padding: 0;
-    overflow: visible;
+    overflow: hidden;
     position: relative;
     border: none;
     background: linear-gradient(145deg, #141a2e 0%, #1a2744 45%, #1B3A6B 100%);
@@ -810,15 +810,16 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 0.45rem;
+    gap: clamp(0.3rem, 1vw, 0.45rem);
     margin-top: 0.35rem;
     max-width: 100%;
   }
   .qs-rrss-ctas .qs-rrss-cta { flex: 0 0 auto; }
   .qs-rrss-cta--social {
-    font-size: 0.62rem;
-    padding: 0.55rem 0.9rem;
+    font-size: clamp(0.56rem, 1.15vw, 0.62rem);
+    padding: clamp(0.45rem, 1.1vw, 0.55rem) clamp(0.7rem, 1.9vw, 0.9rem);
     letter-spacing: 0.1em;
+    white-space: nowrap;
   }
   .qs-rrss-cta--social {
     gap: 0.55rem;
